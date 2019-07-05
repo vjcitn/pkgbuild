@@ -137,13 +137,13 @@ build_setup_source <- function(path, dest_path, vignettes, manual, args,
   } else {
     doc_dir <- file.path(path, "inst", "doc")
     if (dir.exists(doc_dir)) {
-      if (interactive()) {
-        message("Building the package will delete...\n  '", doc_dir, "'\nAre you sure?")
-        res <- utils::menu(c("Yes", "No"))
-        if (res == 2) {
-          return()
-        }
-      }
+#      if (interactive()) {
+#        message("Building the package will delete...\n  '", doc_dir, "'\nAre you sure?")
+#        res <- utils::menu(c("Yes", "No"))
+#        if (res == 2) {
+#          return()
+#        }
+#      }
       unlink(doc_dir, recursive = TRUE)
     }
   }
